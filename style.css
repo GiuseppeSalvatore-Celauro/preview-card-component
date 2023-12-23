@@ -1,0 +1,127 @@
+:root{
+    --font-Fra: 'Fraunces', serif;
+    --font-Mon: 'Montserrat', sans-serif;
+    --fwc-500: 500;
+    --fwc-700: 700;
+    --cp-Dark-Cyan:hsl(158, 36%, 37%);
+    --cp-Cream:hsl(30, 38%, 92%);
+    --cn-Very-dark-blue:hsl(212, 21%, 14%);
+    --cn-Dark-grayish-ble:hsl(228, 12%, 48%);
+    --cn-White:hsl(0, 0%, 100%);
+    --font-size:14px;
+}
+
+*{
+    box-sizing: border-box;
+    font-size: var(--font-size);
+    margin: 0;
+    padding: 0;
+}
+
+.bg-custom-white{
+    background-color: var(--cn-White);
+}
+
+
+body{
+    background-color: var(--cp-Cream);
+}
+
+.dimensioni-custom{
+    height: 500px;
+
+}
+
+.img-custom{
+    background-image: url(./media/image-product-desktop.jpg);
+    background-size: cover;
+    background-position:center;
+    height: 500px;
+    width: 50%;
+    border-radius: 1rem 0 0 1rem;
+}
+
+@media(max-width: 375px){
+    .img-custom{
+        background-image: url(./media/image-product-mobile.jpg);
+        background-size: cover;
+        background-position:top;
+        height: 200px;
+        width: 100%;
+        border-radius: 1rem 1rem 0 0 ;
+    }
+
+}
+.card-body{
+    padding: 2.5rem 2rem;
+}
+@media(max-width:375px){
+    .card-body{
+        padding: 1.5rem 1rem;
+    }
+}
+.card-body>h6,
+.card-body>h1,
+.card-body>p,
+.card-price{
+    margin-bottom: 1.5rem;
+}
+.card-body>h6{
+    font-family: var(--font-Mon);
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    color: var(--cn-Dark-grayish-ble);
+    font-weight: var(--fwc-500);
+}
+.card-body>h1{
+    font-family: var(--font-Fra);
+    color: var(--cn-Very-dark-blue);
+    font-weight: var(--fwc-700);
+}
+
+@media(max-width: 375px){
+    .card-body>h1{
+        font-size: 2rem;
+    }
+
+}
+.card-body>p{
+    font-family: var(--font-Mon);
+    font-weight: var(--fwc-500);
+    color: var(--cn-Dark-grayish-ble);
+    font-size: 1rem;
+    line-height: 170%;
+}
+
+.card{
+    background-color: var(--cn-White);
+}
+
+.card-price>span:first-child{
+    font-family: var(--font-Fra);
+    color: var(--cp-Dark-Cyan);
+    font-size: 2rem;
+    font-weight: var(--fwc-700);
+    margin-right: 1rem;
+}
+.card-price>span:nth-child(2){
+    font-family: var(--font-Mon);
+    color: var(--cn-Dark-grayish-ble);
+    font-size: 1;
+    font-weight: var(--fwc-500);
+    text-decoration: line-through;
+}
+
+.btn-custom {
+    cursor: pointer;
+    background-color: var(--cp-Dark-Cyan);
+    color: var(--cn-White);
+    border: none;
+    padding: 1rem 2.5rem;
+    border-radius: 0.5rem;
+    font-weight: var(--fwc-500);
+    font-family: var(--font-Mon);
+}
+.btn-custom>img{
+    margin-right: 0.5rem;
+}
